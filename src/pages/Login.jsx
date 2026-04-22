@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
@@ -23,6 +23,11 @@ function Login({ onNavigate }) {
         // TODO implement login logic here....
         // TODO validate user credentials and get token from server
     }
+
+    useEffect(() => {
+    axios.get("http://spa-bi-matute.test/api/sample")
+}, [])
+    
 
     return (
         <div className="min-h-screen bg-green-50 flex items-center justify-center px-4 py-12">
